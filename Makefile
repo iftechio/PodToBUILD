@@ -125,5 +125,6 @@ archive:
 		Makefile \
 		WORKSPACE \
 		BUILD \
+		tools\
 		LICENSE
 
