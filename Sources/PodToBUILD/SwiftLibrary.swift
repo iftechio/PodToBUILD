@@ -223,7 +223,7 @@ public struct SwiftLibrary: BazelTarget {
             }
         }
 
-        copts = copts <> AttrSet(basic: ["-I\(PodSupportSystemPublicHeaderDir)\(name)"])
+        copts = copts <> AttrSet(basic: ["-I\(getPodBaseDir() + "/" + headerMapName + "/" + PodSupportSystemPublicHeaderDir + headerMapName)"])
 
         let depsSkylark = deps.map {
             Set($0).sorted(by: (<))
